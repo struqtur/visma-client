@@ -1,5 +1,6 @@
 {
   "packagePath": "visma-client",
+  "invokerPackage": "Struqtur\\VismaEAccounting",
   "gitUserId": "struqtur",
   "gitRepoId": "visma-client"
 }
