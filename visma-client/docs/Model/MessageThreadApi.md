@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **modified_utc** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **is_closed** | **bool** |  | [optional] 
 **message_receivers** | [**\Struqtur\VismaEAccounting\Model\MessageReceiverApi[]**](MessageReceiverApi.md) |  | [optional] 
+**last_message** | [**\Struqtur\VismaEAccounting\Model\MessageApi**](MessageApi.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

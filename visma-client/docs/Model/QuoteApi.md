@@ -43,12 +43,15 @@ Name | Type | Description | Notes
 **rot_reduced_invoicing_automatic_distribution** | **bool** |  | [optional] 
 **persons** | [**\Struqtur\VismaEAccounting\Model\SalesDocumentRotRutReductionPersonApi[]**](SalesDocumentRotRutReductionPersonApi.md) | Only available for ROT/RUT or Green Technology | [optional] 
 **terms_of_payment** | [**\Struqtur\VismaEAccounting\Model\TermsOfPaymentApi**](TermsOfPaymentApi.md) |  | [optional] 
-**sales_document_attachments** | **string[]** |  | [optional] 
+**sales_document_attachments** | **string[]** | Fetch SalesDocumentAttachments via GET /v2/salesdocumentattachments/{attachmentId} | [optional] 
+**message_threads** | **string[]** | Fetch messages via GET /v2/messagethreads/{messageThreadId} | [optional] 
+**notes** | **string[]** | Fetch notes via GET /v2/notes/{notesId} | [optional] 
 **rows** | [**\Struqtur\VismaEAccounting\Model\QuoteRowApi[]**](QuoteRowApi.md) |  | [optional] 
 **total_amount** | **double** |  | [optional] 
 **vat_amount** | **double** |  | [optional] 
 **roundings_amount** | **double** |  | [optional] 
 **uses_green_technology** | **bool** | Set to true if this quote benefits from deduction on Green Technology.  If set to true the quote must have RotReducedInvoicingType set to normal and contain at least one row with applicable deduction. | [optional] 
+**is_not_delivered** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
