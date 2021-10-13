@@ -40,6 +40,7 @@ Name | Type | Description | Notes
 **attachments** | **string[]** |  | [optional] 
 **set_off_amount_invoice_currency** | **double** |  | [optional] 
 **status** | **int** | 0 &#x3D; Draft, 1 &#x3D; Normal, 2 &#x3D; Deleted | [optional] 
+**payment_status** | **int** | Unpaid &#x3D; 3, PartiallyPaidOverDue &#x3D; 4, PartiallyPaid &#x3D; 5, Paid &#x3D; 6, OverDue &#x3D; 7, NotExportedToPaymentFile &#x3D; 8,  PaidInBank &#x3D; 9, NotSentToBank &#x3D; 10, AwaitingSigning &#x3D; 11, CancellationRequestSentToBank &#x3D; 12, PaymentCancelled &#x3D; 13,  RejectedPayment &#x3D; 14, SentToBank &#x3D; 15, ReceivedByBank &#x3D; 16, PaymentExported &#x3D; 17 | [optional] 
 **skip_send_to_bank** | **bool** | Invoice paid manually, won&#39;t be sent to the bank. Requires active bank integration. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

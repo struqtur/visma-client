@@ -42,6 +42,9 @@ Name | Type | Description | Notes
 **house_work_automatic_distribution** | **bool** |  | [optional] 
 **house_work_corporate_identity_number** | **string** | Max length: 20 characters | [optional] 
 **house_work_property_name** | **string** | Max length: 100 characters | [optional] 
+**sales_document_attachments** | **string[]** | Fetch SalesDocumentAttachments via GET /v2/salesdocumentattachments/{attachmentId} | [optional] 
+**message_threads** | **string[]** | Fetch messages via GET /v2/messagethreads/{messageThreadId} | [optional] 
+**notes** | **string[]** | Fetch notes via GET /v2/notes/{notesId} | [optional] 
 **rows** | [**\Struqtur\VismaEAccounting\Model\OrderRowApi[]**](OrderRowApi.md) |  | [optional] 
 **shipped_date_time** | [**\DateTime**](\DateTime.md) | Format: YYYY-MM-DD.   Default: null | [optional] 
 **rot_reduced_invoicing_type** | **int** | 0 &#x3D; None, 1 &#x3D; Rot, 2 &#x3D; Rut | 
@@ -49,6 +52,7 @@ Name | Type | Description | Notes
 **persons** | [**\Struqtur\VismaEAccounting\Model\SalesDocumentRotRutReductionPersonApi[]**](SalesDocumentRotRutReductionPersonApi.md) |  | [optional] 
 **reverse_charge_on_construction_services** | **bool** |  | 
 **uses_green_technology** | **bool** | Set to true if this order benefits from deduction on Green Technology.  If set to true the order must have RotReducedInvoicingType set to normal and contain at least one row with applicable deduction. | [optional] 
+**is_not_delivered** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -313,7 +313,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customerInvoicesV2SendEmail**
-> \Struqtur\VismaEAccounting\Model\CustomerInvoiceApi customerInvoicesV2SendEmail($invoice_id, $email_api)
+> object customerInvoicesV2SendEmail($invoice_id, $email_api)
 
 Send an invoice by email
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Struqtur\VismaEAccounting\Model\CustomerInvoiceApi**](../Model/CustomerInvoiceApi.md)
+**object**
 
 ### Authorization
 

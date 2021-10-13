@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **purchase_price** | **double** |  | [optional] 
 **purchase_price_manually_changed_utc** | [**\DateTime**](\DateTime.md) | Purpose: Set when the purchase price is changed manually | [optional] 
 **send_to_webshop** | **bool** | Purpose: If true, will send article to VismaWebShop (If company has the integration).  Default: True | [optional] 
-**uses_moss** | **bool** | This property can be set to true if the moss setting is checked in company settings and the sales category for the article is Service | [optional] 
+**uses_moss** | **bool** | This property can be set to true if the OSS setting is checked in company settings | [optional] 
 **article_labels** | [**\Struqtur\VismaEAccounting\Model\ArticleLabelApi[]**](ArticleLabelApi.md) |  | [optional] 
 **is_stock** | **bool** | Article can be stock article if stock module is activated and sales category for the article Goods type | [optional] 
 **stock_location_reference** | **string** | Article stock location reference | [optional] 
@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 **update_stock_prices** | **bool** | Purpose: Update article purchase price and freight costs when creating manual stock adjustment | [optional] 
 **barcodes** | [**\Struqtur\VismaEAccounting\Model\ArticleBarcodeApi[]**](ArticleBarcodeApi.md) | Article barcode (currently only one BarcodeType&#x3D;Default) | [optional] 
 **stock_value** | **double** | Total value of articles currently in stock | [optional] 
-**green_technology_type** | **int** | Type of green technology on the article, can be :   None &#x3D; 0,  SolarCellInstallation &#x3D; 1,  ElectricEnergyStorageInstallation &#x3D; 2,  ElectricVehicleChargingPointInstallation &#x3D; 3,  Default value is 0. Not setting it has the same behavior as setting it to None | [optional] 
+**green_technology_type** | **int** | The type of green technology deduction that applies for this article.  &lt;list type&#x3D;\&quot;number\&quot;&gt;&lt;listheader&gt;&lt;term&gt;Value&lt;/term&gt;&lt;description&gt;Usage&lt;/description&gt;&lt;/listheader&gt;&lt;item&gt;&lt;term&gt;0&lt;/term&gt;&lt;description&gt;This article doesn&#39;t benefit from deduction applicable to green technology&lt;/description&gt;&lt;/item&gt;&lt;item&gt;&lt;term&gt;1&lt;/term&gt;&lt;description&gt;Installation of solar cells and panels &lt;/description&gt;&lt;/item&gt;&lt;item&gt;&lt;term&gt;2&lt;/term&gt;&lt;description&gt;Installation of systems for storing privately produced electricity&lt;/description&gt;&lt;/item&gt;&lt;item&gt;&lt;term&gt;3&lt;/term&gt;&lt;description&gt;Installation of charging points for electric vehicles&lt;/description&gt;&lt;/item&gt;&lt;/list&gt; | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

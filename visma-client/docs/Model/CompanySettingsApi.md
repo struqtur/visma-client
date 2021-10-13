@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **company_identifier** | **string** | Company Identifier. Unique identifier for the company | [optional] 
 **bankgiro_number_print** | **string** | Alternative bank giro number on sales invoice printouts | [optional] 
 **keep_original_draft_date** | **bool** | When set to true, keep the original sales invoice draft date as invoice date | [optional] 
+**use_payment_files_for_outgoing_payments** | **bool** | When set to true, supplier invoices can be exported as paymentfile and manually sent to bank | [optional] 
 **use_automatic_vat_calculation** | **bool** | When set to true, vat rows are added (when creating a voucher for example), if the account used relates to.  Used for SE, NO, FI | [optional] 
 **show_cost_center_reminder** | **bool** | Customer has opted to get reminded about adding a cost center when creating invoices. | [optional] 
 **show_project_reminder** | **bool** | Customer has opted to get reminded about adding a project when creating invoices. | [optional] 

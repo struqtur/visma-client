@@ -58,6 +58,8 @@ Name | Type | Description | Notes
 **payment_reference_number** | **string** | Purpose: Empty if UsesPaymentReferenceNumber not activated on the company. Use /v2/companysettings. | [optional] 
 **rot_property_type** | **int** | 1 &#x3D; Apartment, 2 &#x3D; Property  Leave blank or set to null if you do not intend to use ROT or Green Technology functionality | [optional] 
 **sales_document_attachments** | **string[]** | Upload attachments via POST /v2/salesdocumentattachments/customerinvoice | [optional] 
+**message_threads** | **string[]** | Fetch messages via GET /v2/messagethreads/{messageThreadId} | [optional] 
+**notes** | **string[]** | Fetch notes via GET /v2/notes/{noteId} | [optional] 
 **has_auto_invoice_error** | **bool** |  | [optional] 
 **is_not_delivered** | **bool** | Purpose: True if sending by email has failed | [optional] 
 **reverse_charge_on_construction_services** | **bool** |  | [optional] 
