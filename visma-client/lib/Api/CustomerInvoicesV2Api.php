@@ -98,9 +98,9 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceApi
      */
-    public function customerInvoicesV2Get($modified_since_utc = null)
+    public function customerInvoicesV2Get($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
     {
-        list($response) = $this->customerInvoicesV2GetWithHttpInfo($modified_since_utc);
+        list($response) = $this->customerInvoicesV2GetWithHttpInfo($modified_since_utc, $odataQueryFilter);
         return $response;
     }
 
@@ -115,10 +115,10 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return array of \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceApi, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customerInvoicesV2GetWithHttpInfo($modified_since_utc = null)
+    public function customerInvoicesV2GetWithHttpInfo($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
     {
         $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceApi';
-        $request = $this->customerInvoicesV2GetRequest($modified_since_utc);
+        $request = $this->customerInvoicesV2GetRequest($modified_since_utc, $odataQueryFilter);
 
         try {
             $options = $this->createHttpClientOption();
@@ -188,9 +188,9 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customerInvoicesV2GetAsync($modified_since_utc = null)
+    public function customerInvoicesV2GetAsync($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
     {
-        return $this->customerInvoicesV2GetAsyncWithHttpInfo($modified_since_utc)
+        return $this->customerInvoicesV2GetAsyncWithHttpInfo($modified_since_utc, $odataQueryFilter)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -208,10 +208,10 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function customerInvoicesV2GetAsyncWithHttpInfo($modified_since_utc = null)
+    public function customerInvoicesV2GetAsyncWithHttpInfo($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
     {
         $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceApi';
-        $request = $this->customerInvoicesV2GetRequest($modified_since_utc);
+        $request = $this->customerInvoicesV2GetRequest($modified_since_utc, $odataQueryFilter);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -258,7 +258,7 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function customerInvoicesV2GetRequest($modified_since_utc = null)
+    protected function customerInvoicesV2GetRequest($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
     {
         $resourcePath = '/v2/customerinvoices';
         $formParams = [];
@@ -270,6 +270,10 @@ class CustomerInvoicesV2Api
         // query params
         if ($modified_since_utc !== null) {
             $queryParams['modifiedSinceUtc'] = ObjectSerializer::toQueryValue($modified_since_utc);
+        }
+
+        if ($odataQueryFilter !== null) {
+            $queryParams[$odataQueryFilter->param] = $odataQueryFilter->filter;
         }
 
 
