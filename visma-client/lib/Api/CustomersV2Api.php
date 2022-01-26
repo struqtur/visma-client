@@ -37,6 +37,7 @@ use GuzzleHttp\RequestOptions;
 use Struqtur\VismaEAccounting\ApiException;
 use Struqtur\VismaEAccounting\Configuration;
 use Struqtur\VismaEAccounting\HeaderSelector;
+use Struqtur\VismaEAccounting\Model\ODataQueryOptions;
 use Struqtur\VismaEAccounting\ObjectSerializer;
 
 /**
@@ -366,9 +367,9 @@ class CustomersV2Api
      * @throws \InvalidArgumentException
      * @return \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerApi
      */
-    public function customersV2Get()
+    public function customersV2Get(ODataQueryOptions $odataQueryOptions = null)
     {
-        list($response) = $this->customersV2GetWithHttpInfo();
+        list($response) = $this->customersV2GetWithHttpInfo($odataQueryOptions);
         return $response;
     }
 
@@ -382,10 +383,10 @@ class CustomersV2Api
      * @throws \InvalidArgumentException
      * @return array of \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerApi, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customersV2GetWithHttpInfo()
+    public function customersV2GetWithHttpInfo(ODataQueryOptions $odataQueryOptions = null)
     {
         $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerApi';
-        $request = $this->customersV2GetRequest();
+        $request = $this->customersV2GetRequest($odataQueryOptions);
 
         try {
             $options = $this->createHttpClientOption();
@@ -523,9 +524,8 @@ class CustomersV2Api
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function customersV2GetRequest()
+    protected function customersV2GetRequest(ODataQueryOptions $odataQueryOptions = null)
     {
-
         $resourcePath = '/v2/customers';
         $formParams = [];
         $queryParams = [];
@@ -533,7 +533,17 @@ class CustomersV2Api
         $httpBody = '';
         $multipart = false;
 
-
+        // query params
+        if ($odataQueryOptions !== null) {
+            if ($odataQueryOptions->filter) {
+                $queryParams[$odataQueryOptions->filter->param] = $odataQueryOptions->filter->filter;
+            }
+            if ($odataQueryOptions->paging) {
+                foreach ($odataQueryOptions->paging->getParams() as $param => $value) {
+                    $queryParams[$param] = $value;
+                }
+            }
+        }
 
         // body params
         $_tempBody = null;
