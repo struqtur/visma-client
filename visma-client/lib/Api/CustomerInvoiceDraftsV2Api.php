@@ -37,6 +37,7 @@ use GuzzleHttp\RequestOptions;
 use Struqtur\VismaEAccounting\ApiException;
 use Struqtur\VismaEAccounting\Configuration;
 use Struqtur\VismaEAccounting\HeaderSelector;
+use Struqtur\VismaEAccounting\Model\ODataQueryOptions;
 use Struqtur\VismaEAccounting\ObjectSerializer;
 
 /**
@@ -667,9 +668,9 @@ class CustomerInvoiceDraftsV2Api
      * @throws \InvalidArgumentException
      * @return \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceDraftApi
      */
-    public function customerInvoiceDraftsV2Get()
+    public function customerInvoiceDraftsV2Get(ODataQueryOptions $odataQueryOptions = null)
     {
-        list($response) = $this->customerInvoiceDraftsV2GetWithHttpInfo();
+        list($response) = $this->customerInvoiceDraftsV2GetWithHttpInfo($odataQueryOptions);
         return $response;
     }
 
@@ -683,10 +684,10 @@ class CustomerInvoiceDraftsV2Api
      * @throws \InvalidArgumentException
      * @return array of \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceDraftApi, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customerInvoiceDraftsV2GetWithHttpInfo()
+    public function customerInvoiceDraftsV2GetWithHttpInfo(ODataQueryOptions $odataQueryOptions = null)
     {
         $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceDraftApi';
-        $request = $this->customerInvoiceDraftsV2GetRequest();
+        $request = $this->customerInvoiceDraftsV2GetRequest($odataQueryOptions);
 
         try {
             $options = $this->createHttpClientOption();
@@ -824,9 +825,8 @@ class CustomerInvoiceDraftsV2Api
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function customerInvoiceDraftsV2GetRequest()
+    protected function customerInvoiceDraftsV2GetRequest(ODataQueryOptions $odataQueryOptions = null)
     {
-
         $resourcePath = '/v2/customerinvoicedrafts';
         $formParams = [];
         $queryParams = [];
@@ -834,7 +834,17 @@ class CustomerInvoiceDraftsV2Api
         $httpBody = '';
         $multipart = false;
 
-
+        // query params
+        if ($odataQueryOptions !== null) {
+            if ($odataQueryOptions->filter) {
+                $queryParams[$odataQueryOptions->filter->param] = $odataQueryOptions->filter->filter;
+            }
+            if ($odataQueryOptions->paging) {
+                foreach ($odataQueryOptions->paging->getParams() as $param => $value) {
+                    $queryParams[$param] = $value;
+                }
+            }
+        }
 
         // body params
         $_tempBody = null;

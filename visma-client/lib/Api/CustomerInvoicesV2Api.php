@@ -37,6 +37,7 @@ use GuzzleHttp\RequestOptions;
 use Struqtur\VismaEAccounting\ApiException;
 use Struqtur\VismaEAccounting\Configuration;
 use Struqtur\VismaEAccounting\HeaderSelector;
+use Struqtur\VismaEAccounting\Model\ODataQueryOptions;
 use Struqtur\VismaEAccounting\ObjectSerializer;
 
 /**
@@ -98,9 +99,9 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceApi
      */
-    public function customerInvoicesV2Get($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
+    public function customerInvoicesV2Get($modified_since_utc = null, ODataQueryOptions $odataQueryOptions = null)
     {
-        list($response) = $this->customerInvoicesV2GetWithHttpInfo($modified_since_utc, $odataQueryFilter);
+        list($response) = $this->customerInvoicesV2GetWithHttpInfo($modified_since_utc, $odataQueryOptions);
         return $response;
     }
 
@@ -115,10 +116,10 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return array of \Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceApi, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customerInvoicesV2GetWithHttpInfo($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
+    public function customerInvoicesV2GetWithHttpInfo($modified_since_utc = null, ODataQueryOptions $odataQueryOptions = null)
     {
         $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseCustomerInvoiceApi';
-        $request = $this->customerInvoicesV2GetRequest($modified_since_utc, $odataQueryFilter);
+        $request = $this->customerInvoicesV2GetRequest($modified_since_utc, $odataQueryOptions);
 
         try {
             $options = $this->createHttpClientOption();
@@ -258,7 +259,7 @@ class CustomerInvoicesV2Api
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function customerInvoicesV2GetRequest($modified_since_utc = null, ODataQueryFilter $odataQueryFilter = null)
+    protected function customerInvoicesV2GetRequest($modified_since_utc = null, ODataQueryOptions $odataQueryOptions = null)
     {
         $resourcePath = '/v2/customerinvoices';
         $formParams = [];
@@ -272,8 +273,15 @@ class CustomerInvoicesV2Api
             $queryParams['modifiedSinceUtc'] = ObjectSerializer::toQueryValue($modified_since_utc);
         }
 
-        if ($odataQueryFilter !== null) {
-            $queryParams[$odataQueryFilter->param] = $odataQueryFilter->filter;
+        if ($odataQueryOptions !== null) {
+            if ($odataQueryOptions->filter) {
+                $queryParams[$odataQueryOptions->filter->param] = $odataQueryOptions->filter->filter;
+            }
+            if ($odataQueryOptions->paging) {
+                foreach ($odataQueryOptions->paging->getParams() as $param => $value) {
+                    $queryParams[$param] = $value;
+                }
+            }
         }
 
 
