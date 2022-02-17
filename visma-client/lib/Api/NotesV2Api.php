@@ -96,7 +96,7 @@ class NotesV2Api
      *
      * @throws \Struqtur\VismaEAccounting\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Struqtur\VismaEAccounting\Model\NoteApi
+     * @return \Struqtur\VismaEAccounting\Model\PaginatedResponseNoteApi
      */
     public function notesV2Get(ODataQueryOptions $odataQueryOptions = null)
     {
@@ -112,11 +112,11 @@ class NotesV2Api
      *
      * @throws \Struqtur\VismaEAccounting\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Struqtur\VismaEAccounting\Model\NoteApi, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Struqtur\VismaEAccounting\Model\PaginatedResponseNoteApi, HTTP status code, HTTP response headers (array of strings)
      */
     public function notesV2GetWithHttpInfo(ODataQueryOptions $odataQueryOptions = null)
     {
-        $returnType = '\Struqtur\VismaEAccounting\Model\NoteApi';
+        $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseNoteApi';
         $request = $this->notesV2GetRequest($odataQueryOptions);
 
         try {
@@ -208,7 +208,7 @@ class NotesV2Api
      */
     public function notesV2GetAsyncWithHttpInfo()
     {
-        $returnType = '\Struqtur\VismaEAccounting\Model\NoteApi';
+        $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseNoteApi';
         $request = $this->notesV2GetRequest();
 
         return $this->client
