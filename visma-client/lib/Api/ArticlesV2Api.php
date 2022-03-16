@@ -101,9 +101,9 @@ class ArticlesV2Api
      * @throws \InvalidArgumentException
      * @return \Struqtur\VismaEAccounting\Model\PaginatedResponseArticleApi
      */
-    public function articlesV2Get($show_prices_with_two_decimals = null, ODataQueryOptions $odataQueryOptions = null, $customerId = null)
+    public function articlesV2Get($show_prices_with_two_decimals = null, ODataQueryOptions $odataQueryOptions = null, $customer_id = null)
     {
-        list($response) = $this->articlesV2GetWithHttpInfo($show_prices_with_two_decimals, $odataQueryOptions);
+        list($response) = $this->articlesV2GetWithHttpInfo($show_prices_with_two_decimals, $odataQueryOptions, $customer_id);
         return $response;
     }
 
@@ -122,7 +122,7 @@ class ArticlesV2Api
     public function articlesV2GetWithHttpInfo($show_prices_with_two_decimals = null, ODataQueryOptions $odataQueryOptions = null, $customer_id = null)
     {
         $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseArticleApi';
-        $request = $this->articlesV2GetRequest($show_prices_with_two_decimals, $odataQueryOptions, $customerId);
+        $request = $this->articlesV2GetRequest($show_prices_with_two_decimals, $odataQueryOptions, $customer_id);
 
         try {
             $options = $this->createHttpClientOption();
