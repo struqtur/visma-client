@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ArticlesV2Api
  * PHP version 5
@@ -37,7 +38,7 @@ use GuzzleHttp\RequestOptions;
 use Struqtur\VismaEAccounting\ApiException;
 use Struqtur\VismaEAccounting\Configuration;
 use Struqtur\VismaEAccounting\HeaderSelector;
-use Struqtur\VismaEAccounting\Model\ODataQueryFilter;
+use Struqtur\VismaEAccounting\Model\ODataQueryOptions;
 use Struqtur\VismaEAccounting\ObjectSerializer;
 
 /**
@@ -99,9 +100,9 @@ class ArticlesV2Api
      * @throws \InvalidArgumentException
      * @return \Struqtur\VismaEAccounting\Model\PaginatedResponseArticleApi
      */
-    public function articlesV2Get($show_prices_with_two_decimals = null, ODataQueryFilter $odataQueryFilter = null)
+    public function articlesV2Get($show_prices_with_two_decimals = null, ODataQueryOptions $odataQueryOptions = null)
     {
-        list($response) = $this->articlesV2GetWithHttpInfo($show_prices_with_two_decimals);
+        list($response) = $this->articlesV2GetWithHttpInfo($show_prices_with_two_decimals, $odataQueryOptions);
         return $response;
     }
 
@@ -116,10 +117,10 @@ class ArticlesV2Api
      * @throws \InvalidArgumentException
      * @return array of \Struqtur\VismaEAccounting\Model\PaginatedResponseArticleApi, HTTP status code, HTTP response headers (array of strings)
      */
-    public function articlesV2GetWithHttpInfo($show_prices_with_two_decimals = null, ODataQueryFilter $odataQueryFilter = null)
+    public function articlesV2GetWithHttpInfo($show_prices_with_two_decimals = null, ODataQueryOptions $odataQueryOptions = null)
     {
         $returnType = '\Struqtur\VismaEAccounting\Model\PaginatedResponseArticleApi';
-        $request = $this->articlesV2GetRequest($show_prices_with_two_decimals);
+        $request = $this->articlesV2GetRequest($show_prices_with_two_decimals, $odataQueryOptions);
 
         try {
             $options = $this->createHttpClientOption();
@@ -259,7 +260,7 @@ class ArticlesV2Api
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function articlesV2GetRequest($show_prices_with_two_decimals = null, ODataQueryFilter $odataQueryFilter = null)
+    protected function articlesV2GetRequest($show_prices_with_two_decimals = null, ODataQueryOptions $odataQueryOptions = null)
     {
         $resourcePath = '/v2/articles';
         $formParams = [];
@@ -273,8 +274,16 @@ class ArticlesV2Api
             $queryParams['showPricesWithTwoDecimals'] = ObjectSerializer::toQueryValue($show_prices_with_two_decimals);
         }
 
-        if ($odataQueryFilter !== null) {
-            $queryParams[$odataQueryFilter->param] = $odataQueryFilter->filter;
+        if ($odataQueryOptions !== null) {
+            if ($odataQueryOptions->filter) {
+                $queryParams[$odataQueryOptions->filter->param] = $odataQueryOptions->filter->filter;
+            }
+
+            if ($odataQueryOptions->paging) {
+                foreach ($odataQueryOptions->paging->getParams() as $param => $value) {
+                    $queryParams[$param] = $value;
+                }
+            }
         }
 
         // body params
