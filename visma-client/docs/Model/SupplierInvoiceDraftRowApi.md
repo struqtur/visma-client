@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **delivery_date** | [**\DateTime**](\DateTime.md) | Format: YYYY-MM-DD  Purpose: This feature is for dutch companies only which enabled agriculture support | [optional] 
 **harvest_year** | **int** | Purpose: This feature is for dutch companies only which enabled agriculture support | [optional] 
 **vat_amount** | **double** | Only for Denmark and Netherlands | [optional] 
+**proportional_vat_rate_value** | **int** | Only for Norway | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -12,7 +12,9 @@ Name | Type | Description | Notes
 **contact_person_phone** | **string** | Max length: 50 characters | [optional] 
 **currency_code** | **string** | Max length: 3 characters. Default value: Currency of the user company | [optional] 
 **gln** | **string** | NOTE: Obsolete. Please use EdiGlnNumber instead | [optional] 
-**email_address** | **string** | Max length: 255 characters | [optional] 
+**email_address** | **string** | Max length: 255 characters  This is a default email address for sending customer invoices.  If EmailAddressOrder and EmailAddressQuote properties are empty we use this email as default one for sending quotes and orders. | [optional] 
+**email_address_order** | **string** | Max length: 255 characters  This is a default email address for sending orders.  If it is empty then we use general EmailAddress property. | [optional] 
+**email_address_quote** | **string** | Max length: 255 characters  This is a default email address for sending quotes.  If it is empty then we use general EmailAddress property. | [optional] 
 **invoice_address1** | **string** | Max length: 50 characters | [optional] 
 **invoice_address2** | **string** | Max length: 50 characters | [optional] 
 **invoice_city** | **string** | Max length: 50 characters | 
@@ -53,7 +55,15 @@ Name | Type | Description | Notes
 **auto_invoice_registration_request_sent_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **email_addresses** | **string[]** |  | [optional] 
 **customer_labels** | [**\Struqtur\VismaEAccounting\Model\CustomerLabelApi[]**](CustomerLabelApi.md) |  | [optional] 
+**message_threads** | **string[]** | Fetch messages via GET /v2/messagethreads/{messageThreadId} | [optional] 
+**notes** | **string[]** | Fetch notes via GET /v2/notes/{noteId} | [optional] 
 **is_future_invoice_date_allowed** | **bool** | Purpose: Future dates on invoices are allowed based on terms of payments and invoice currency code settings | [optional] 
+**delivery_based_vat** | **bool** | Purpose: Option to set the delivery address as the base for vat and oss calculations. Delivery city, country code and postal code must be set aswell | [optional] 
+**sales_price_list_id** | **string** | Returns the sales price list id that is connected to the customer. It will be used only for Pro variant companies | [optional] 
+**iban** | **string** | Purpose: Customer&#39;s bank account IBAN (manual entry) | [optional] 
+**direct_debit_customer_settings** | [**\Struqtur\VismaEAccounting\Model\DirectDebitCustomerSettingsApi**](DirectDebitCustomerSettingsApi.md) | Purpose: Direct Debit module (for the Netherlands) settings | [optional] 
+**discount_agreement_id** | **string** | Returns the discount agreement id that is connected to the customer. It will be used only for Pro variant companies | [optional] 
+**unpaid_invoices_amount** | **double** | The total amount of unpaid invoices for the customer. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

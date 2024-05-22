@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **is_default_cheque_account** | **bool** | Purpose: Only used when having several cheque accounts | [optional] 
 **currency_code** | **string** | Purpose: Default value: Base currency of the company | [optional] 
 **modified_utc** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**balance** | [**\Struqtur\VismaEAccounting\Model\BalanceAndDateApi**](BalanceAndDateApi.md) | Purpose: The latest avaiable balance for the bank account, with the date of the balance. | [optional] 
+**bank_account_holder_name** | **string** | Used for dutch companies | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

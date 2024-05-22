@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **cost_center_item_id3** | **string** | Source: Get from /v2/costcenters | [optional] 
 **vat_code_id** | **string** |  | [optional] 
 **vat_code_and_percent** | **string** |  | [optional] 
+**vat_amount** | **double** |  | [optional] 
 **quantity** | **double** | Format: Max 2 decimals  Purpose: This feature is for dutch companies only which enabled agriculture support | [optional] 
 **weight** | **double** | Format: Max 2 decimals  Purpose: This feature is for dutch companies only which enabled agriculture support | [optional] 
 **delivery_date** | [**\DateTime**](\DateTime.md) | Format: YYYY-MM-DD  Purpose: This feature is for dutch companies only which enabled agriculture support | [optional] 

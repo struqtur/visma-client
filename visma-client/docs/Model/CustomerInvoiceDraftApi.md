@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **rot_reduced_invoicing_org_number** | **string** | Max length: 11 characters | [optional] 
 **rot_reduced_invoicing_amount** | **double** | Format: 2 decimals | [optional] 
 **rot_reduced_invoicing_automatic_distribution** | **bool** | Default: False | [optional] 
-**rot_property_type** | **int** |  | [optional] 
+**rot_property_type** | **int** | 1 - Apartment  2 - Property  Leave blank or set to null if you do not intend to use ROT or Green Technology functionality | [optional] 
 **house_work_other_costs** | **double** |  | [optional] 
 **rows** | [**\Struqtur\VismaEAccounting\Model\CustomerInvoiceDraftRowApi[]**](CustomerInvoiceDraftRowApi.md) |  | [optional] 
 **persons** | [**\Struqtur\VismaEAccounting\Model\SalesDocumentRotRutReductionPersonApi[]**](SalesDocumentRotRutReductionPersonApi.md) |  | [optional] 
@@ -41,7 +41,10 @@ Name | Type | Description | Notes
 **customer_is_private_person** | **bool** | Purpose: Value is automatically set up depending on the selected customer&#39;s properties | [optional] 
 **reverse_charge_on_construction_services** | **bool** |  | [optional] 
 **sales_document_attachments** | **string[]** |  | [optional] 
+**message_threads** | **string[]** | Fetch messages via GET /v2/messagethreads/{messageThreadId} | [optional] 
+**notes** | **string[]** | Fetch notes via GET /v2/notes/{noteId} | [optional] 
 **invoice_date** | [**\DateTime**](\DateTime.md) | Optional invoice date. | [optional] 
+**due_date** | [**\DateTime**](\DateTime.md) | Due date of the customer invoice draft. | [optional] 
 **delivery_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **total_amount** | **double** |  | [optional] 
 **total_vat_amount** | **double** |  | [optional] 
@@ -49,9 +52,12 @@ Name | Type | Description | Notes
 **total_amount_base_currency** | **double** |  | [optional] 
 **total_vat_amount_base_currency** | **double** |  | [optional] 
 **customer_number** | **string** | Max length: 16 characters | [optional] 
+**customer_name** | **string** | Customer&#39;s actual name | [optional] 
 **includes_vat** | **bool** | Purpose: If true the unit prices on rows include VAT. The value is set upon creation depending whether \&quot;Show prices excl. VAT for private individuals\&quot; in company settings is marked or not | [optional] 
 **replace_unit_price_when_zero** | **bool** | When set to true an unit price of zero will be replaced with the unit price on the article register. When set to false it allows creation of drafts with unit price 0 on one or more rows.  Rows with an unit price other than 0 are not affected by this setting. The default value is false. | [optional] 
 **uses_green_technology** | **bool** | Set to true if this customer invoice draft benefits from deduction on Green Technology.  If set to true the customer invoice draft must have RotReducedInvoicingType set to normal and contain at least one row with applicable deduction. | [optional] 
+**contribution_margin** | [**\Struqtur\VismaEAccounting\Model\ContributionMarginApi**](ContributionMarginApi.md) | Contribution margin variables | [optional] 
+**is_direct_debit** | **bool** | Indicated whether this invoice has direct debit applied  Only applicable for NL | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

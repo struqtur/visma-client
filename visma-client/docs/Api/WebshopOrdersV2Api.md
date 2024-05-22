@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **webshopOrdersV2ConvertToInvoice**
-> \Struqtur\VismaEAccounting\Model\PaginatedResponseWebshopOrderApi webshopOrdersV2ConvertToInvoice($webshop_order_id)
+> string webshopOrdersV2ConvertToInvoice($webshop_order_id)
 
 Converts a webshop order to a invoice. The resulted invoice will appear as paid in the sales invoice list.
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Struqtur\VismaEAccounting\Model\PaginatedResponseWebshopOrderApi**](../Model/PaginatedResponseWebshopOrderApi.md)
+**string**
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -99,7 +99,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -148,7 +148,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
 *AllocationPeriodsV2Api* | [**allocationPeriodsV2Get**](docs/Api/AllocationPeriodsV2Api.md#allocationperiodsv2get) | **GET** /v2/allocationperiods | Get allocation periods.
 *AllocationPeriodsV2Api* | [**allocationPeriodsV2Get_0**](docs/Api/AllocationPeriodsV2Api.md#allocationperiodsv2get_0) | **GET** /v2/allocationperiods/{allocationPeriodId} | Get single allocation period.
 *AllocationPeriodsV2Api* | [**allocationPeriodsV2Post**](docs/Api/AllocationPeriodsV2Api.md#allocationperiodsv2post) | **POST** /v2/allocationperiods | Add allocation periods for voucher or supplier invoice.
+*AllocationPeriodsV2Api* | [**allocationPeriodsV2Put**](docs/Api/AllocationPeriodsV2Api.md#allocationperiodsv2put) | **PUT** /v2/allocationperiods | Update allocation periods for voucher or supplier invoice.
 *AppStoreActivationStatusV2Api* | [**appStoreActivationStatusV2Get**](docs/Api/AppStoreActivationStatusV2Api.md#appstoreactivationstatusv2get) | **GET** /v2/appstore/status | 
 *AppStoreActivationStatusV2Api* | [**appStoreActivationStatusV2Put**](docs/Api/AppStoreActivationStatusV2Api.md#appstoreactivationstatusv2put) | **PUT** /v2/appstore/status | 
 *ApprovalV2Api* | [**approvalV2ApproveInvoice**](docs/Api/ApprovalV2Api.md#approvalv2approveinvoice) | **PUT** /v2/approval/supplierinvoice/{id} | Replace the approval status of a invoice draft.
@@ -166,13 +167,18 @@ Class | Method | HTTP request | Description
 *DeliveryMethodsV2Api* | [**deliveryMethodsV2Get_0**](docs/Api/DeliveryMethodsV2Api.md#deliverymethodsv2get_0) | **GET** /v2/deliverymethods/{deliveryMethodId} | Get a delivery method.
 *DeliveryTermsV2Api* | [**deliveryTermsV2Get**](docs/Api/DeliveryTermsV2Api.md#deliverytermsv2get) | **GET** /v2/deliveryterms | Get a list of delivery terms
 *DeliveryTermsV2Api* | [**deliveryTermsV2Get_0**](docs/Api/DeliveryTermsV2Api.md#deliverytermsv2get_0) | **GET** /v2/deliveryterms/{deliveryTermId} | Get single delivery term
+*DiscountAgreementsV2Api* | [**discountAgreementsV2Get**](docs/Api/DiscountAgreementsV2Api.md#discountagreementsv2get) | **GET** /v2/discountagreements | Gets discount agreements.
+*DiscountAgreementsV2Api* | [**discountAgreementsV2Get_0**](docs/Api/DiscountAgreementsV2Api.md#discountagreementsv2get_0) | **GET** /v2/discountagreements/{discountAgreementId} | Gets a discount agreement by id.
 *DocumentsV2Api* | [**documentsV2Get**](docs/Api/DocumentsV2Api.md#documentsv2get) | **GET** /v2/documents/{id} | Get a vat report pdf by document id.
 *FiscalYearsV2Api* | [**fiscalYearsV2Get**](docs/Api/FiscalYearsV2Api.md#fiscalyearsv2get) | **GET** /v2/fiscalyears | Get a list of fiscal years.
 *FiscalYearsV2Api* | [**fiscalYearsV2Get_0**](docs/Api/FiscalYearsV2Api.md#fiscalyearsv2get_0) | **GET** /v2/fiscalyears/{id} | Get a single fiscal year.
 *FiscalYearsV2Api* | [**fiscalYearsV2Get_1**](docs/Api/FiscalYearsV2Api.md#fiscalyearsv2get_1) | **GET** /v2/fiscalyears/openingbalances | Gets the opening balances of the first fiscal year. If you want balances of following years, use the GET /accountbalances instead.
 *FiscalYearsV2Api* | [**fiscalYearsV2Post**](docs/Api/FiscalYearsV2Api.md#fiscalyearsv2post) | **POST** /v2/fiscalyears | Create a fiscal year.
+*FiscalYearsV2Api* | [**fiscalYearsV2Put**](docs/Api/FiscalYearsV2Api.md#fiscalyearsv2put) | **PUT** /v2/fiscalyears/{id} | Updates a fiscal year.
 *FiscalYearsV2Api* | [**fiscalYearsV2UpdateAccountOpeningBalance**](docs/Api/FiscalYearsV2Api.md#fiscalyearsv2updateaccountopeningbalance) | **PUT** /v2/fiscalyears/openingbalances | Updates the opening balance of the first fiscal year
 *ForeignPaymentCodesV2Api* | [**foreignPaymentCodesV2Get**](docs/Api/ForeignPaymentCodesV2Api.md#foreignpaymentcodesv2get) | **GET** /v2/foreignpaymentcodes | Gets a list of foreign payment codes.
+*InventoryItemsV2Api* | [**inventoryItemsV2Get**](docs/Api/InventoryItemsV2Api.md#inventoryitemsv2get) | **GET** /v2/inventoryitems | Get a list of inventory items.
+*InventoryItemsV2Api* | [**inventoryItemsV2Get_0**](docs/Api/InventoryItemsV2Api.md#inventoryitemsv2get_0) | **GET** /v2/inventoryitems/{id} | Get a specific inventory item.
 *MessageThreadsV2Api* | [**messageThreadsV2Get**](docs/Api/MessageThreadsV2Api.md#messagethreadsv2get) | **GET** /v2/messagethreads/{messageThreadId} | Retrives a message thread.
 *MessageThreadsV2Api* | [**messageThreadsV2GetMessages**](docs/Api/MessageThreadsV2Api.md#messagethreadsv2getmessages) | **GET** /v2/messagethreads/{messageThreadId}/messages | Retrives the messages of a message thread.
 *MessageThreadsV2Api* | [**messageThreadsV2GetMessages_0**](docs/Api/MessageThreadsV2Api.md#messagethreadsv2getmessages_0) | **GET** /v2/messagethreads/messages | Gets all the messages of the threads.
@@ -225,8 +231,13 @@ Class | Method | HTTP request | Description
 *SalesDocumentAttachmentsV2Api* | [**salesDocumentAttachmentsV2Post**](docs/Api/SalesDocumentAttachmentsV2Api.md#salesdocumentattachmentsv2post) | **POST** /v2/salesdocumentattachments | Create a sales document attachment.
 *SalesDocumentAttachmentsV2Api* | [**salesDocumentAttachmentsV2PostCustomerInvoice**](docs/Api/SalesDocumentAttachmentsV2Api.md#salesdocumentattachmentsv2postcustomerinvoice) | **POST** /v2/salesdocumentattachments/customerinvoice | Create a sales document attached to a customer invoice (including customer ledger items).
 *SalesDocumentAttachmentsV2Api* | [**salesDocumentAttachmentsV2PostCustomerInvoiceDraft**](docs/Api/SalesDocumentAttachmentsV2Api.md#salesdocumentattachmentsv2postcustomerinvoicedraft) | **POST** /v2/salesdocumentattachments/customerinvoicedraft | Create a sales document attached to a customer invoice draft.
+*SalesPriceListsV2Api* | [**salesPriceListsV2Get**](docs/Api/SalesPriceListsV2Api.md#salespricelistsv2get) | **GET** /v2/salespricelists | Gets sales price lists.
+*SalesPriceListsV2Api* | [**salesPriceListsV2Get_0**](docs/Api/SalesPriceListsV2Api.md#salespricelistsv2get_0) | **GET** /v2/salespricelists/{salesPriceListId} | Gets a sales price list by id.
+*SalesPriceListsV2Api* | [**salesPriceListsV2Get_1**](docs/Api/SalesPriceListsV2Api.md#salespricelistsv2get_1) | **GET** /v2/salespricelists/prices | Gets all sales prices from the company.
+*SalesPriceListsV2Api* | [**salesPriceListsV2Get_2**](docs/Api/SalesPriceListsV2Api.md#salespricelistsv2get_2) | **GET** /v2/salespricelists/prices/{salesPriceListId}/{articleId} | Gets the sales price from a specific price list for a specific article.
 *SupplierInvoiceDraftsV2Api* | [**supplierInvoiceDraftsV2Convert**](docs/Api/SupplierInvoiceDraftsV2Api.md#supplierinvoicedraftsv2convert) | **POST** /v2/supplierinvoicedrafts/{supplierInvoiceDraftId}/convert | Converts a supplier invoice draft to a supplier invoice
 *SupplierInvoiceDraftsV2Api* | [**supplierInvoiceDraftsV2Delete**](docs/Api/SupplierInvoiceDraftsV2Api.md#supplierinvoicedraftsv2delete) | **DELETE** /v2/supplierinvoicedrafts/{supplierInvoiceDraftId} | Deletes a supplier invoice draft
+*SupplierInvoiceDraftsV2Api* | [**supplierInvoiceDraftsV2DeleteAllocations**](docs/Api/SupplierInvoiceDraftsV2Api.md#supplierinvoicedraftsv2deleteallocations) | **DELETE** /v2/supplierinvoicedrafts/{supplierInvoiceDraftId}/allocationperiods | Deletes allocationperiods connected to supplier invoice draft
 *SupplierInvoiceDraftsV2Api* | [**supplierInvoiceDraftsV2Get**](docs/Api/SupplierInvoiceDraftsV2Api.md#supplierinvoicedraftsv2get) | **GET** /v2/supplierinvoicedrafts | Get a paginated list of all supplier invoice drafts.
 *SupplierInvoiceDraftsV2Api* | [**supplierInvoiceDraftsV2Get_0**](docs/Api/SupplierInvoiceDraftsV2Api.md#supplierinvoicedraftsv2get_0) | **GET** /v2/supplierinvoicedrafts/{supplierInvoiceDraftId} | Get a single supplier invoice draft.
 *SupplierInvoiceDraftsV2Api* | [**supplierInvoiceDraftsV2Post**](docs/Api/SupplierInvoiceDraftsV2Api.md#supplierinvoicedraftsv2post) | **POST** /v2/supplierinvoicedrafts | Create a supplier invoice draft.
@@ -245,8 +256,9 @@ Class | Method | HTTP request | Description
 *UnitsV2Api* | [**unitsV2Get**](docs/Api/UnitsV2Api.md#unitsv2get) | **GET** /v2/units | Get a list of Units
 *UnitsV2Api* | [**unitsV2Get_0**](docs/Api/UnitsV2Api.md#unitsv2get_0) | **GET** /v2/units/{id} | Get a single unit.
 *UsersV2Api* | [**usersV2Get**](docs/Api/UsersV2Api.md#usersv2get) | **GET** /v2/users | Get a list of users
-*VatCodeV2Api* | [**vatCodeV2Get**](docs/Api/VatCodeV2Api.md#vatcodev2get) | **GET** /v2/vatcodes | Gets a list of all vat codes
+*VatCodeV2Api* | [**vatCodeV2Get**](docs/Api/VatCodeV2Api.md#vatcodev2get) | **GET** /v2/vatcodes | Gets a list of all vat codes.   If Oss rules are set in company settings Oss vat codes are included
 *VatCodeV2Api* | [**vatCodeV2Get_0**](docs/Api/VatCodeV2Api.md#vatcodev2get_0) | **GET** /v2/vatcodes/{id} | Get a vat code item by it&#39;s id.
+*VatCodeV2Api* | [**vatCodeV2Get_1**](docs/Api/VatCodeV2Api.md#vatcodev2get_1) | **GET** /v2/vatcodesrates | Gets a list of all vat codes and their vat rate values.   If Oss rules are set in company settings Oss vat codes are included
 *VatReportV2Api* | [**vatReportV2Get**](docs/Api/VatReportV2Api.md#vatreportv2get) | **GET** /v2/vatreports | Get a list of vat reports
 *VatReportV2Api* | [**vatReportV2Get_0**](docs/Api/VatReportV2Api.md#vatreportv2get_0) | **GET** /v2/vatreports/{id} | Get a vat report item by id.
 *VoucherDraftsV2Api* | [**voucherDraftsV2Convert**](docs/Api/VoucherDraftsV2Api.md#voucherdraftsv2convert) | **POST** /v2/voucherdrafts/{voucherDraftId}/convert | Converts a VoucherDraft to a Voucher.
@@ -296,18 +308,22 @@ Class | Method | HTTP request | Description
  - [AttachmentUploadApi](docs/Model/AttachmentUploadApi.md)
  - [AutoInvoiceAddressApi](docs/Model/AutoInvoiceAddressApi.md)
  - [AutoInvoiceApi](docs/Model/AutoInvoiceApi.md)
+ - [BalanceAndDateApi](docs/Model/BalanceAndDateApi.md)
  - [BankAccountApi](docs/Model/BankAccountApi.md)
  - [BankApi](docs/Model/BankApi.md)
  - [BankTransactionApi](docs/Model/BankTransactionApi.md)
  - [BankTransactionRowApi](docs/Model/BankTransactionRowApi.md)
+ - [CompanyGreenTechnologySettingsApi](docs/Model/CompanyGreenTechnologySettingsApi.md)
  - [CompanyRotRutSettingsApi](docs/Model/CompanyRotRutSettingsApi.md)
  - [CompanySettingsApi](docs/Model/CompanySettingsApi.md)
  - [CompanyTextsApi](docs/Model/CompanyTextsApi.md)
+ - [ContributionMarginApi](docs/Model/ContributionMarginApi.md)
  - [CostCenterApi](docs/Model/CostCenterApi.md)
  - [CostCenterItemApi](docs/Model/CostCenterItemApi.md)
  - [CountQueryOption](docs/Model/CountQueryOption.md)
  - [CountQueryValidator](docs/Model/CountQueryValidator.md)
  - [CountryApi](docs/Model/CountryApi.md)
+ - [CreditedByApi](docs/Model/CreditedByApi.md)
  - [CurrencyApi](docs/Model/CurrencyApi.md)
  - [CustomerApi](docs/Model/CustomerApi.md)
  - [CustomerInvoiceApi](docs/Model/CustomerInvoiceApi.md)
@@ -323,6 +339,8 @@ Class | Method | HTTP request | Description
  - [DefaultQuerySettings](docs/Model/DefaultQuerySettings.md)
  - [DeliveryMethodApi](docs/Model/DeliveryMethodApi.md)
  - [DeliveryTermApi](docs/Model/DeliveryTermApi.md)
+ - [DirectDebitCustomerSettingsApi](docs/Model/DirectDebitCustomerSettingsApi.md)
+ - [DiscountAgreementApi](docs/Model/DiscountAgreementApi.md)
  - [DocumentApi](docs/Model/DocumentApi.md)
  - [DocumentApprovalEventApi](docs/Model/DocumentApprovalEventApi.md)
  - [EdmReferentialConstraintPropertyPair](docs/Model/EdmReferentialConstraintPropertyPair.md)
@@ -331,6 +349,7 @@ Class | Method | HTTP request | Description
  - [FilterQueryOption](docs/Model/FilterQueryOption.md)
  - [FilterQueryValidator](docs/Model/FilterQueryValidator.md)
  - [FiscalYearApi](docs/Model/FiscalYearApi.md)
+ - [FiscalYearUpdateApi](docs/Model/FiscalYearUpdateApi.md)
  - [ForeignPaymentCodesAPI](docs/Model/ForeignPaymentCodesAPI.md)
  - [IEdmDirectValueAnnotationsManager](docs/Model/IEdmDirectValueAnnotationsManager.md)
  - [IEdmEntityContainer](docs/Model/IEdmEntityContainer.md)
@@ -352,6 +371,10 @@ Class | Method | HTTP request | Description
  - [IEdmVocabularyAnnotatable](docs/Model/IEdmVocabularyAnnotatable.md)
  - [IEdmVocabularyAnnotation](docs/Model/IEdmVocabularyAnnotation.md)
  - [IServiceProvider](docs/Model/IServiceProvider.md)
+ - [InventoryAccountingTemplateApi](docs/Model/InventoryAccountingTemplateApi.md)
+ - [InventoryAccumulatedDepreciationApi](docs/Model/InventoryAccumulatedDepreciationApi.md)
+ - [InventoryEventApi](docs/Model/InventoryEventApi.md)
+ - [InventoryItemApi](docs/Model/InventoryItemApi.md)
  - [InvoicePaymentApi](docs/Model/InvoicePaymentApi.md)
  - [InvoiceUrlApi](docs/Model/InvoiceUrlApi.md)
  - [LedgerVoucherRelationApi](docs/Model/LedgerVoucherRelationApi.md)
@@ -389,9 +412,11 @@ Class | Method | HTTP request | Description
  - [ODataQueryOptionsCustomerLedgerItemApi](docs/Model/ODataQueryOptionsCustomerLedgerItemApi.md)
  - [ODataQueryOptionsDeliveryMethodApi](docs/Model/ODataQueryOptionsDeliveryMethodApi.md)
  - [ODataQueryOptionsDeliveryTermApi](docs/Model/ODataQueryOptionsDeliveryTermApi.md)
+ - [ODataQueryOptionsDiscountAgreementApi](docs/Model/ODataQueryOptionsDiscountAgreementApi.md)
  - [ODataQueryOptionsDocumentApi](docs/Model/ODataQueryOptionsDocumentApi.md)
  - [ODataQueryOptionsFiscalYearApi](docs/Model/ODataQueryOptionsFiscalYearApi.md)
  - [ODataQueryOptionsForeignPaymentCodesAPI](docs/Model/ODataQueryOptionsForeignPaymentCodesAPI.md)
+ - [ODataQueryOptionsInventoryItemApi](docs/Model/ODataQueryOptionsInventoryItemApi.md)
  - [ODataQueryOptionsLedgerVoucherRelationApi](docs/Model/ODataQueryOptionsLedgerVoucherRelationApi.md)
  - [ODataQueryOptionsMessageApi](docs/Model/ODataQueryOptionsMessageApi.md)
  - [ODataQueryOptionsMessageThreadApi](docs/Model/ODataQueryOptionsMessageThreadApi.md)
@@ -401,6 +426,8 @@ Class | Method | HTTP request | Description
  - [ODataQueryOptionsPartnerResourceLinkApi](docs/Model/ODataQueryOptionsPartnerResourceLinkApi.md)
  - [ODataQueryOptionsProjectApi](docs/Model/ODataQueryOptionsProjectApi.md)
  - [ODataQueryOptionsQuoteApi](docs/Model/ODataQueryOptionsQuoteApi.md)
+ - [ODataQueryOptionsSalesPriceListApi](docs/Model/ODataQueryOptionsSalesPriceListApi.md)
+ - [ODataQueryOptionsSalesPriceListRowApi](docs/Model/ODataQueryOptionsSalesPriceListRowApi.md)
  - [ODataQueryOptionsStandardAccountApi](docs/Model/ODataQueryOptionsStandardAccountApi.md)
  - [ODataQueryOptionsSupplierApi](docs/Model/ODataQueryOptionsSupplierApi.md)
  - [ODataQueryOptionsSupplierInvoiceApi](docs/Model/ODataQueryOptionsSupplierInvoiceApi.md)
@@ -409,6 +436,7 @@ Class | Method | HTTP request | Description
  - [ODataQueryOptionsUnitApi](docs/Model/ODataQueryOptionsUnitApi.md)
  - [ODataQueryOptionsUserApi](docs/Model/ODataQueryOptionsUserApi.md)
  - [ODataQueryOptionsVatCodeApi](docs/Model/ODataQueryOptionsVatCodeApi.md)
+ - [ODataQueryOptionsVatCodeRateApi](docs/Model/ODataQueryOptionsVatCodeRateApi.md)
  - [ODataQueryOptionsVatReportApi](docs/Model/ODataQueryOptionsVatReportApi.md)
  - [ODataQueryOptionsVoucherApi](docs/Model/ODataQueryOptionsVoucherApi.md)
  - [ODataQueryOptionsVoucherDraftApi](docs/Model/ODataQueryOptionsVoucherDraftApi.md)
@@ -446,14 +474,18 @@ Class | Method | HTTP request | Description
  - [PaginatedResponseCustomerLedgerItemApi](docs/Model/PaginatedResponseCustomerLedgerItemApi.md)
  - [PaginatedResponseDeliveryMethodApi](docs/Model/PaginatedResponseDeliveryMethodApi.md)
  - [PaginatedResponseDeliveryTermApi](docs/Model/PaginatedResponseDeliveryTermApi.md)
+ - [PaginatedResponseDiscountAgreementApi](docs/Model/PaginatedResponseDiscountAgreementApi.md)
  - [PaginatedResponseFiscalYearApi](docs/Model/PaginatedResponseFiscalYearApi.md)
  - [PaginatedResponseForeignPaymentCodesAPI](docs/Model/PaginatedResponseForeignPaymentCodesAPI.md)
+ - [PaginatedResponseInventoryItemApi](docs/Model/PaginatedResponseInventoryItemApi.md)
  - [PaginatedResponseLedgerVoucherRelationApi](docs/Model/PaginatedResponseLedgerVoucherRelationApi.md)
  - [PaginatedResponseOpeningBalancesApi](docs/Model/PaginatedResponseOpeningBalancesApi.md)
  - [PaginatedResponseOrderApi](docs/Model/PaginatedResponseOrderApi.md)
  - [PaginatedResponsePartnerResourceLinkApi](docs/Model/PaginatedResponsePartnerResourceLinkApi.md)
  - [PaginatedResponseProjectApi](docs/Model/PaginatedResponseProjectApi.md)
  - [PaginatedResponseQuoteApi](docs/Model/PaginatedResponseQuoteApi.md)
+ - [PaginatedResponseSalesPriceListApi](docs/Model/PaginatedResponseSalesPriceListApi.md)
+ - [PaginatedResponseSalesPriceListRowApi](docs/Model/PaginatedResponseSalesPriceListRowApi.md)
  - [PaginatedResponseStandardAccountApi](docs/Model/PaginatedResponseStandardAccountApi.md)
  - [PaginatedResponseSupplierApi](docs/Model/PaginatedResponseSupplierApi.md)
  - [PaginatedResponseSupplierInvoiceApi](docs/Model/PaginatedResponseSupplierInvoiceApi.md)
@@ -462,6 +494,7 @@ Class | Method | HTTP request | Description
  - [PaginatedResponseUnitApi](docs/Model/PaginatedResponseUnitApi.md)
  - [PaginatedResponseUserApi](docs/Model/PaginatedResponseUserApi.md)
  - [PaginatedResponseVatCodeApi](docs/Model/PaginatedResponseVatCodeApi.md)
+ - [PaginatedResponseVatCodeRateApi](docs/Model/PaginatedResponseVatCodeRateApi.md)
  - [PaginatedResponseVatReportApi](docs/Model/PaginatedResponseVatReportApi.md)
  - [PaginatedResponseVoucherApi](docs/Model/PaginatedResponseVoucherApi.md)
  - [PaginatedResponseVoucherDraftApi](docs/Model/PaginatedResponseVoucherDraftApi.md)
@@ -481,6 +514,8 @@ Class | Method | HTTP request | Description
  - [SalesDocumentAttachmentApi](docs/Model/SalesDocumentAttachmentApi.md)
  - [SalesDocumentAttachmentUploadApi](docs/Model/SalesDocumentAttachmentUploadApi.md)
  - [SalesDocumentRotRutReductionPersonApi](docs/Model/SalesDocumentRotRutReductionPersonApi.md)
+ - [SalesPriceListApi](docs/Model/SalesPriceListApi.md)
+ - [SalesPriceListRowApi](docs/Model/SalesPriceListRowApi.md)
  - [SelectExpandClause](docs/Model/SelectExpandClause.md)
  - [SelectExpandQueryOption](docs/Model/SelectExpandQueryOption.md)
  - [SelectExpandQueryValidator](docs/Model/SelectExpandQueryValidator.md)
@@ -502,6 +537,8 @@ Class | Method | HTTP request | Description
  - [UnitApi](docs/Model/UnitApi.md)
  - [UserApi](docs/Model/UserApi.md)
  - [VatCodeApi](docs/Model/VatCodeApi.md)
+ - [VatCodeRateApi](docs/Model/VatCodeRateApi.md)
+ - [VatRateApi](docs/Model/VatRateApi.md)
  - [VatReportApi](docs/Model/VatReportApi.md)
  - [VoucherApi](docs/Model/VoucherApi.md)
  - [VoucherDraftApi](docs/Model/VoucherDraftApi.md)

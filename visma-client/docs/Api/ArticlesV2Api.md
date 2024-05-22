@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **articlesV2Get**
-> \Struqtur\VismaEAccounting\Model\PaginatedResponseArticleApi articlesV2Get($show_prices_with_two_decimals)
+> \Struqtur\VismaEAccounting\Model\PaginatedResponseArticleApi articlesV2Get($show_prices_with_two_decimals, $customer_id)
 
 Gets articles.
 
@@ -28,9 +28,10 @@ $apiInstance = new Struqtur\VismaEAccounting\Api\ArticlesV2Api(
     new GuzzleHttp\Client()
 );
 $show_prices_with_two_decimals = true; // bool | 
+$customer_id = "customer_id_example"; // string | If customerId is provided in querystring, then article prices and discounts will be returned based on  which pricelist and discount agreement is assigned to customer.
 
 try {
-    $result = $apiInstance->articlesV2Get($show_prices_with_two_decimals);
+    $result = $apiInstance->articlesV2Get($show_prices_with_two_decimals, $customer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ArticlesV2Api->articlesV2Get: ', $e->getMessage(), PHP_EOL;
@@ -43,6 +44,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **show_prices_with_two_decimals** | **bool**|  | [optional]
+ **customer_id** | [**string**](../Model/.md)| If customerId is provided in querystring, then article prices and discounts will be returned based on  which pricelist and discount agreement is assigned to customer. | [optional]
 
 ### Return type
 
@@ -55,12 +57,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **articlesV2Get_0**
-> \Struqtur\VismaEAccounting\Model\ArticleApi articlesV2Get_0($article_id, $show_prices_with_two_decimals)
+> \Struqtur\VismaEAccounting\Model\ArticleApi articlesV2Get_0($article_id, $show_prices_with_two_decimals, $customer_id)
 
 Gets an article by id.
 
@@ -78,9 +80,10 @@ $apiInstance = new Struqtur\VismaEAccounting\Api\ArticlesV2Api(
 );
 $article_id = "article_id_example"; // string | 
 $show_prices_with_two_decimals = true; // bool | 
+$customer_id = "customer_id_example"; // string | If customerId is provided in querystring, then article prices and discounts will be returned based on  which pricelist and discount agreement is assigned to customer.
 
 try {
-    $result = $apiInstance->articlesV2Get_0($article_id, $show_prices_with_two_decimals);
+    $result = $apiInstance->articlesV2Get_0($article_id, $show_prices_with_two_decimals, $customer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ArticlesV2Api->articlesV2Get_0: ', $e->getMessage(), PHP_EOL;
@@ -94,6 +97,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **article_id** | [**string**](../Model/.md)|  |
  **show_prices_with_two_decimals** | **bool**|  | [optional]
+ **customer_id** | [**string**](../Model/.md)| If customerId is provided in querystring, then article prices and discounts will be returned based on  which pricelist and discount agreement is assigned to customer. | [optional]
 
 ### Return type
 
@@ -106,7 +110,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -154,8 +158,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -205,8 +209,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

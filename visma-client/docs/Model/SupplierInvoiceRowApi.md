@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **account_name** | **string** |  | [optional] 
 **vat_code_id** | **string** | Only for Denmark and Netherlands | [optional] 
 **vat_amount** | **double** | Only for Denmark and Netherlands | [optional] 
+**proportional_vat_rate_value** | **int** | Only for Norway | [optional] 
 **cost_center_item_id1** | **string** | Source: Get from /v2/costcenters. | [optional] 
 **cost_center_item_id2** | **string** | Source: Get from /v2/costcenters. | [optional] 
 **cost_center_item_id3** | **string** | Source: Get from /v2/costcenters. | [optional] 

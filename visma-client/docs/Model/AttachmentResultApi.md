@@ -11,11 +11,13 @@ Name | Type | Description | Notes
 **temporary_url** | **string** |  | [optional] 
 **comment** | **string** |  | [optional] 
 **supplier_name** | **string** |  | [optional] 
+**currency_code** | **string** |  | [optional] 
 **amount_invoice_currency** | **double** |  | [optional] 
 **type** | **int** | 0 &#x3D; Invoice, 1 &#x3D; Receipt, 2 &#x3D; Document | [optional] 
 **attachment_status** | **int** | 0 &#x3D; Matched, 1 &#x3D; Unmatched | [optional] 
 **uploaded_by** | **string** |  | [optional] 
-**image_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**image_date** | [**\DateTime**](\DateTime.md) | Date when source image was uploaded | [optional] 
+**transaction_date** | [**\DateTime**](\DateTime.md) | The interpreted transaction date of the source image, eg invoicedate for a invoice, paymentdate for a reciept.   Can be null if not interpreted. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

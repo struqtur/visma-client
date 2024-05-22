@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**fiscalYearsV2Get_0**](FiscalYearsV2Api.md#fiscalYearsV2Get_0) | **GET** /v2/fiscalyears/{id} | Get a single fiscal year.
 [**fiscalYearsV2Get_1**](FiscalYearsV2Api.md#fiscalYearsV2Get_1) | **GET** /v2/fiscalyears/openingbalances | Gets the opening balances of the first fiscal year. If you want balances of following years, use the GET /accountbalances instead.
 [**fiscalYearsV2Post**](FiscalYearsV2Api.md#fiscalYearsV2Post) | **POST** /v2/fiscalyears | Create a fiscal year.
+[**fiscalYearsV2Put**](FiscalYearsV2Api.md#fiscalYearsV2Put) | **PUT** /v2/fiscalyears/{id} | Updates a fiscal year.
 [**fiscalYearsV2UpdateAccountOpeningBalance**](FiscalYearsV2Api.md#fiscalYearsV2UpdateAccountOpeningBalance) | **PUT** /v2/fiscalyears/openingbalances | Updates the opening balance of the first fiscal year
 
 
@@ -52,7 +53,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -101,7 +102,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -146,7 +147,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -194,8 +195,59 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **fiscalYearsV2Put**
+> \Struqtur\VismaEAccounting\Model\FiscalYearApi fiscalYearsV2Put($id, $fiscal_year)
+
+Updates a fiscal year.
+
+<p>Requires any of the following scopes: <br><b>ea:sales, ea:accounting</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing, Bookkeeping, Solo, Visma Lön Smart</b></p>
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Struqtur\VismaEAccounting\Api\FiscalYearsV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$id = "id_example"; // string | Id of the fiscal year to update.
+$fiscal_year = new \Struqtur\VismaEAccounting\Model\FiscalYearUpdateApi(); // \Struqtur\VismaEAccounting\Model\FiscalYearUpdateApi | 
+
+try {
+    $result = $apiInstance->fiscalYearsV2Put($id, $fiscal_year);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FiscalYearsV2Api->fiscalYearsV2Put: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**string**](../Model/.md)| Id of the fiscal year to update. |
+ **fiscal_year** | [**\Struqtur\VismaEAccounting\Model\FiscalYearUpdateApi**](../Model/FiscalYearUpdateApi.md)|  |
+
+### Return type
+
+[**\Struqtur\VismaEAccounting\Model\FiscalYearApi**](../Model/FiscalYearApi.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -245,8 +297,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

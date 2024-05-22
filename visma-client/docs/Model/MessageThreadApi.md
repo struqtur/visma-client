@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] 
-**document_type** | **int** | The document type to which the message thread is attached   None &#x3D; 0, CustomerInvoice &#x3D; 1, CustomerInvoiceDraft &#x3D; 2, SupplierInvoice &#x3D; 3, Voucher &#x3D; 4, Quotation &#x3D; 5, Order &#x3D; 6, SupplierInvoiceDraft &#x3D; 7, WebshopOrder &#x3D; 8, Customer &#x3D; 9, Receipt &#x3D; 10, Article &#x3D; 11, VatReport &#x3D; 12, Supplier &#x3D; 13, Inventory &#x3D; 14, Employee &#x3D; 15, Payslip &#x3D; 16 | [optional] 
+**document_type** | **int** | The document type to which the message thread is attached   None &#x3D; 0, CustomerInvoice &#x3D; 1, CustomerInvoiceDraft &#x3D; 2, SupplierInvoice &#x3D; 3, Voucher &#x3D; 4, Quotation &#x3D; 5, Order &#x3D; 6, SupplierInvoiceDraft &#x3D; 7, WebshopOrder &#x3D; 8, Customer &#x3D; 9, Receipt &#x3D; 10, Article &#x3D; 11, VatReport &#x3D; 12, Supplier &#x3D; 13, Inventory &#x3D; 14, Employee &#x3D; 15, Payslip &#x3D; 16, Image &#x3D; 17, Reconciliation &#x3D; 18,  QuoteDraft &#x3D; 19, VoucherDraft &#x3D; 20, OrderDraft &#x3D; 21 | [optional] 
 **document_id** | **string** | Default: No attached document  Used in combination with DocumentType, represents the unique identifier of the document to which it is attached | [optional] 
 **document_number** | **string** |  | [optional] 
 **subject** | **string** |  | [optional] 

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 
-<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -60,7 +60,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -69,7 +69,7 @@ No authorization required
 
 Converts an order to an invoice
 
-<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -109,7 +109,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -118,7 +118,7 @@ No authorization required
 
 Delete an order.
 
-<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -158,7 +158,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -167,7 +167,7 @@ No authorization required
 
 Get a pdf-file of a delivery note for an order.
 
-<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -216,7 +216,7 @@ No authorization required
 
 Get orders.
 
-<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -252,7 +252,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -261,7 +261,7 @@ No authorization required
 
 Get order
 
-<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -301,7 +301,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -310,7 +310,7 @@ No authorization required
 
 Create order.
 
-<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -349,8 +349,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -359,7 +359,7 @@ No authorization required
 
 Get a pdf-file of an order.
 
-<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales, ea:sales_readonly</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -408,7 +408,7 @@ No authorization required
 
 Replace content in an order.
 
-<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>order_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
+<p>Requires any of the following scopes: <br><b>ea:sales</b></p><p>Requires any of the following modules: <br><b>sales_standard</b></p><p>Available in any of the following variants: <br><b>Pro, Standard, Invoicing</b></p>
 
 ### Example
 ```php
@@ -449,8 +449,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

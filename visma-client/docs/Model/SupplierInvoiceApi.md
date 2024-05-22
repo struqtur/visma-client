@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 **is_domestic** | **bool** |  | [optional] 
 **remaining_amount** | **double** |  | [optional] 
 **remaining_amount_invoice_currency** | **double** |  | [optional] 
+**number** | **int** |  | [optional] 
+**number_series** | **string** |  | [optional] 
 **voucher_number** | **string** |  | [optional] 
 **voucher_id** | **string** |  | [optional] 
 **created_from_draft_id** | **string** |  | [optional] 
@@ -41,7 +43,8 @@ Name | Type | Description | Notes
 **set_off_amount_invoice_currency** | **double** |  | [optional] 
 **status** | **int** | 0 &#x3D; Draft, 1 &#x3D; Normal, 2 &#x3D; Deleted | [optional] 
 **payment_status** | **int** | Unpaid &#x3D; 3, PartiallyPaidOverDue &#x3D; 4, PartiallyPaid &#x3D; 5, Paid &#x3D; 6, OverDue &#x3D; 7, NotExportedToPaymentFile &#x3D; 8,  PaidInBank &#x3D; 9, NotSentToBank &#x3D; 10, AwaitingSigning &#x3D; 11, CancellationRequestSentToBank &#x3D; 12, PaymentCancelled &#x3D; 13,  RejectedPayment &#x3D; 14, SentToBank &#x3D; 15, ReceivedByBank &#x3D; 16, PaymentExported &#x3D; 17 | [optional] 
-**skip_send_to_bank** | **bool** | Invoice paid manually, won&#39;t be sent to the bank. Requires active bank integration. | [optional] 
+**payment_file_status** | **int** | NoPaymentNecessary &#x3D; 0, ReadyForAutomaticBankIntegration &#x3D; 11, PaymentCreated &#x3D; 12, PaymentReceivedByAutoPay &#x3D; 13, PaymentSentToBank &#x3D; 19, PaymentReceivedByBank &#x3D; 20,  ReadyForManualPaymentFileExport &#x3D; 21, ReadyForManualPaymentFileExportForeign &#x3D; 22, ManualPaymentFileExported &#x3D; 29, PaymentPaidInBank &#x3D; 30, ReadyForDeferredAutomaticBankIntegration &#x3D; 31,  AwaitsSigning &#x3D; 40, Signed &#x3D; 41, PaymentRejectedByBank &#x3D; 42, PaymentCancelledInBank &#x3D; 43, PaymentCancelledInAutopay &#x3D; 44, PaymentCancellationRequestSent &#x3D; 45, FailedToSendToBank &#x3D; 100 | [optional] 
+**skip_send_to_bank** | **bool** | Use when invoice is paid manually, won&#39;t be sent to the bank. Only has affect on active bank integration | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

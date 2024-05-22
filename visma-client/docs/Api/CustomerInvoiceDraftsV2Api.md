@@ -62,8 +62,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -112,7 +112,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -206,12 +206,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customerInvoiceDraftsV2Post**
-> \Struqtur\VismaEAccounting\Model\CustomerInvoiceDraftApi customerInvoiceDraftsV2Post($customer_invoice_draft)
+> \Struqtur\VismaEAccounting\Model\CustomerInvoiceDraftApi customerInvoiceDraftsV2Post($customer_invoice_draft, $override_customer_is_private_person)
 
 Create a single customer invoice draft.
 
@@ -228,9 +228,10 @@ $apiInstance = new Struqtur\VismaEAccounting\Api\CustomerInvoiceDraftsV2Api(
     new GuzzleHttp\Client()
 );
 $customer_invoice_draft = new \Struqtur\VismaEAccounting\Model\CustomerInvoiceDraftApi(); // \Struqtur\VismaEAccounting\Model\CustomerInvoiceDraftApi | 
+$override_customer_is_private_person = true; // bool | Set to true in order to override the CustomerIsPrivatePerson property in order to ignore the customer setting.
 
 try {
-    $result = $apiInstance->customerInvoiceDraftsV2Post($customer_invoice_draft);
+    $result = $apiInstance->customerInvoiceDraftsV2Post($customer_invoice_draft, $override_customer_is_private_person);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerInvoiceDraftsV2Api->customerInvoiceDraftsV2Post: ', $e->getMessage(), PHP_EOL;
@@ -243,6 +244,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_invoice_draft** | [**\Struqtur\VismaEAccounting\Model\CustomerInvoiceDraftApi**](../Model/CustomerInvoiceDraftApi.md)|  |
+ **override_customer_is_private_person** | **bool**| Set to true in order to override the CustomerIsPrivatePerson property in order to ignore the customer setting. | [optional]
 
 ### Return type
 
@@ -254,8 +256,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -305,8 +307,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
