@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **type** | **int** | Purpose: Returns account type number. This feature is for dutch companies only | [optional] 
 **type_description** | **string** | Purpose: Returns account type descripion | [optional] 
 **modified_utc** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**created_utc** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **is_active** | **bool** | Purpose: If the account is active or not | 
 **is_project_allowed** | **bool** | Purpose: If the account is allowed to have projects connected to it | [optional] 
 **is_cost_center_allowed** | **bool** | Purpose: If the account is allowed to have cost centers connected to it | [optional] 

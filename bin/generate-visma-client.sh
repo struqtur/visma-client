@@ -1,6 +1,7 @@
 #!/bin/bash
 
 docker run \
+  --ulimit nofile=8096:8096 \
   --rm \
   -v ${PWD}:/local \
   swaggerapi/swagger-codegen-cli generate \

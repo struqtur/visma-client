@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **name** | **string** | Max length: 50 characters | 
 **name_english** | **string** | Max length: 50 characters | [optional] 
 **net_price** | **double** | Format: Max 2 decimals | [optional] 
+**net_price_with_discount** | **double** | Format: Max 2 decimals | [optional] 
 **gross_price** | **double** | Format: Max 2 decimals | [optional] 
 **coding_id** | **string** | Source: Get from /v2/articleaccountcodings | 
 **coding_name** | **string** |  | [optional] 
@@ -25,9 +26,13 @@ Name | Type | Description | Notes
 **purchase_price** | **double** |  | [optional] 
 **purchase_price_manually_changed_utc** | [**\DateTime**](\DateTime.md) | Purpose: Set when the purchase price is changed manually | [optional] 
 **send_to_webshop** | **bool** | Purpose: If true, will send article to VismaWebShop (If company has the integration).  Default: True | [optional] 
-**uses_moss** | **bool** | This property can be set to true if the OSS setting is checked in company settings | [optional] 
+**uses_moss** | **bool** | This property can be set if the OSS setting is checked in company settings. Only applicable if using Accrual accounting. | [optional] 
 **article_labels** | [**\Struqtur\VismaEAccounting\Model\ArticleLabelApi[]**](ArticleLabelApi.md) |  | [optional] 
+**message_threads** | **string[]** | Fetch messages via GET /v2/messagethreads/{messageThreadId} | [optional] 
+**notes** | **string[]** | Fetch notes via GET /v2/notes/{noteId} | [optional] 
 **is_stock** | **bool** | Article can be stock article if stock module is activated and sales category for the article Goods type | [optional] 
+**show_stock_information** | **bool** | ShowStockInformation &#x3D; TRUE IF company has active stock module, article is stock article and article is not a service article                              OR company hasn&#39;t active stock module and article is not a service article. | [optional] 
+**is_service_article** | **bool** | IsServiceArticle &#x3D; FALSE if the sales category for the article is of the type Goods  IsServiceArticle &#x3D; TRUE if the sales category for the article is of the type Service.  To be able to filter Articles by AccountCodingType, use property called CodingType: 1 &#x3D; Goods, 2 &#x3D; Services. | [optional] 
 **stock_location_reference** | **string** | Article stock location reference | [optional] 
 **freight_costs** | **double** | Freight costs per article unit | [optional] 
 **freight_costs_manually_changed_utc** | [**\DateTime**](\DateTime.md) | Purpose: Set when the freight costs is changed manually | [optional] 
@@ -35,6 +40,7 @@ Name | Type | Description | Notes
 **barcodes** | [**\Struqtur\VismaEAccounting\Model\ArticleBarcodeApi[]**](ArticleBarcodeApi.md) | Article barcode (currently only one BarcodeType&#x3D;Default) | [optional] 
 **stock_value** | **double** | Total value of articles currently in stock | [optional] 
 **green_technology_type** | **int** | The type of green technology deduction that applies for this article.  &lt;list type&#x3D;\&quot;number\&quot;&gt;&lt;listheader&gt;&lt;term&gt;Value&lt;/term&gt;&lt;description&gt;Usage&lt;/description&gt;&lt;/listheader&gt;&lt;item&gt;&lt;term&gt;0&lt;/term&gt;&lt;description&gt;This article doesn&#39;t benefit from deduction applicable to green technology&lt;/description&gt;&lt;/item&gt;&lt;item&gt;&lt;term&gt;1&lt;/term&gt;&lt;description&gt;Installation of solar cells and panels &lt;/description&gt;&lt;/item&gt;&lt;item&gt;&lt;term&gt;2&lt;/term&gt;&lt;description&gt;Installation of systems for storing privately produced electricity&lt;/description&gt;&lt;/item&gt;&lt;item&gt;&lt;term&gt;3&lt;/term&gt;&lt;description&gt;Installation of charging points for electric vehicles&lt;/description&gt;&lt;/item&gt;&lt;/list&gt; | [optional] 
+**discount_percentage** | **double** | Discount from discount agreement | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

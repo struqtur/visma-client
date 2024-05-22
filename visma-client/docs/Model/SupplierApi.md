@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **address1** | **string** | Max length: 50 characters | [optional] 
 **address2** | **string** | Max length: 50 characters | [optional] 
 **automatic_payment_service** | **bool** | Purpose: Indicates if the supplier is paid by an automatic payment service. Supplier invoices to such suppliers will not be sent to the bank via the bank integration  Default value: false | [optional] 
+**unpaid_invoices_amount** | **double** |  | [optional] 
 **bank_account_number** | **string** | Max length: 50 characters. Purpose: Only used in norwegian, dutch and danish eAccounting for domestic payments | [optional] 
 **bank_bban** | **string** | Purpose: Used on foreign payments to identify a bankaccount together with Bank Code (SupplierBankCode)  Format NO: 11 characters, Format DK: 11-14 characters | [optional] 
 **bank_bic** | **string** | Purpose: Used on foreign payments to identify a bankaccount together with IBAN (SupplierBankIban)  Format: 6 letters followed by 2 or 5 characters (total length 8 or 11) | [optional] 
@@ -26,10 +27,12 @@ Name | Type | Description | Notes
 **created_utc** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **currency_code** | **string** | Max length: 3 characters. Default value: Currency of the user company | [optional] 
 **email_address** | **string** | Max length: 225 characters | [optional] 
+**message_threads** | **string[]** | Fetch messages via GET /v2/messagethreads/{messageThreadId} | [optional] 
 **mobile_phone** | **string** | Max length: 50 characters | [optional] 
 **modified_utc** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **name** | **string** | Max length: 50 characters | 
 **note** | **string** | Max length: 400 characters | [optional] 
+**notes** | **string[]** | Fetch notes via GET /v2/notes/{noteId} | [optional] 
 **plusgiro_number** | **string** | Max length: 10 characters. Purpose: Only used in swedish eAccounting, for swedish suppliers | [optional] 
 **postal_code** | **string** | Max length: 10 characters | [optional] 
 **telephone** | **string** | Max length: 50 characters | [optional] 
@@ -38,9 +41,10 @@ Name | Type | Description | Notes
 **www_address** | **string** | Max length: 255 characters | [optional] 
 **bank_fee_code** | **int** | Purpose: Used for foreign payments to determine which party that pays for aditional bank fees. 0 &#x3D; None, 1 &#x3D; SenderPaysAllBankCharges, 2 &#x3D; ReceiverPaysAllBankCharges, 3 &#x3D; ReceiverPaysForeignCosts | [optional] 
 **pay_from_bank_account_id** | **string** | Source: Get from /v2/bankaccounts. Purpose: Used for foreign payments to determine which bankaccount the payment will be from | [optional] 
-**foreign_payment_code_id** | **string** | Source: Get from /v2/foreignpaymentcodes. Purpose: Used for categorization of foreign purchases (NO and SE only). | [optional] 
+**foreign_payment_code_id** | **string** | Source: Get from /v2/foreignpaymentcodes. Purpose: Used for categorization of foreign purchases (NO and SE only). Must be set if having active bankintegration, Supplier is foreign and AutomaticPaymentService is false. | [optional] 
 **uses_payment_reference_numbers** | **bool** | Purpose: Used if the supplier uses payment reference numbers, OCR, KID etc. NO and SE only. Default: false | [optional] 
 **is_active** | **bool** | Default: true | [optional] 
+**proportional_vat** | **bool** | Purpose: Inform that the supplier has Proportional VAT activated Default: false | [optional] 
 **self_employed_without_fixed_address** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

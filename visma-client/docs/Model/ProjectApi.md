@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Purpose: Unique Id provided by eAccounting | [optional] 
 **number** | **string** | Max length: 9 characters | 
-**name** | **string** | Max length: 50 characters | 
+**name** | **string** | Max length: 200 characters | 
 **start_date** | [**\DateTime**](\DateTime.md) |  | 
 **end_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **customer_id** | **string** | Source: Get from /v2/customers | [optional] 

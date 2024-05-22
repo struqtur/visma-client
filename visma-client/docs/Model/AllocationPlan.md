@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**supplier_invoice_draft_id** | **string** | If assigned, SupplierInvoiceDraftRow must be set | [optional] 
+**supplier_invoice_draft_row** | **int** | Required if SupplierInvoiceDraftId is assigned | [optional] 
 **supplier_invoice_id** | **string** | If assigned, SupplierInvoiceRow must be set | [optional] 
 **supplier_invoice_row** | **int** | Required if SupplierInvoiceId is assigned | [optional] 
 **voucher_id** | **string** | If assigned, VoucherRow must be set | [optional] 

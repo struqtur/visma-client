@@ -28,9 +28,10 @@ Name | Type | Description | Notes
 **self_employed_without_fixed_address** | **bool** |  | [optional] 
 **is_quick_invoice** | **bool** |  | [optional] 
 **is_domestic** | **bool** |  | [optional] 
-**approval_status** | **int** | Purpose: Use /v2/approval/supplierinvoice/{id}. 0 &#x3D; None, 1 &#x3D; Approved, 2 &#x3D; Rejected, 3 &#x3D; ReadyForApproval | [optional] 
-**skip_send_to_bank** | **bool** | Invoice paid manually, won&#39;t be sent to the bank. Requires active bank integration. | [optional] 
+**approval_status** | **int** | Purpose: Use /v2/approval/supplierinvoice/{id}. 0 &#x3D; None, 1 &#x3D; Approved, 2 &#x3D; Rejected, 3 &#x3D; ReadyForApproval, 4 &#x3D; ActionRequired | [optional] 
+**skip_send_to_bank** | **bool** | Use when invoice is paid manually, won&#39;t be sent to the bank. Only has affect on active bank integration | [optional] 
 **allocation_periods** | [**\Struqtur\VismaEAccounting\Model\AllocationPeriodApi[]**](AllocationPeriodApi.md) | Purpose: For create use POST /v2/allocationperiods. | [optional] 
+**supplier_invoice_origin** | **int** | EAccounting &#x3D; 0,  AutoInvoice &#x3D; 1,  API &#x3D; 2,  VAT &#x3D; 3 | [optional] 
 **attachments** | [**\Struqtur\VismaEAccounting\Model\AttachmentLinkApi**](AttachmentLinkApi.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

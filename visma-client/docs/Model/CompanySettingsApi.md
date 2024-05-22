@@ -5,22 +5,25 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Max length: 100 characters | 
 **email** | **string** | Max length: 255 characters | [optional] 
-**phone** | **string** | Max length: 20 characters | [optional] 
+**phone** | **string** | Max length: 20 characters | 
 **mobile_phone** | **string** | Max length: 20 characters | [optional] 
-**address1** | **string** | Max length: 40 characters | [optional] 
+**address1** | **string** | Max length: 40 characters | 
 **address2** | **string** | Max length: 40 characters | [optional] 
 **country_code** | **string** | Max length: 2 characters | 
-**postal_code** | **string** | Max length: 10 characters | [optional] 
-**city** | **string** | Max length: 40 characters | [optional] 
+**postal_code** | **string** | Max length: 10 characters | 
+**city** | **string** | Max length: 40 characters | 
 **website** | **string** | Max length: 255 characters | [optional] 
+**our_reference** | **string** | Default company reference.  Max length: 100 characters | [optional] 
 **currency_code** | **string** |  | [optional] 
 **terms_of_payment_id** | **string** | Source: Get from /v2/termsofpayments | [optional] 
 **corporate_identity_number** | **string** |  | [optional] 
+**peppol_id** | **string** | PeppolParticipantIdentifiers string separated by semicolons.  If identifier is empty in DB the we try to fetch it from InExchange. | [optional] 
 **vat_code** | **string** | VAT identification number | [optional] 
 **bank_giro** | **string** | Only used in Sweden. | [optional] 
 **plus_giro** | **string** | Only used in Sweden. | [optional] 
 **bank_account** | **string** |  | [optional] 
 **iban** | **string** |  | [optional] 
+**account_number_digits** | **int** |  | [optional] 
 **accounting_locked_to** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **accounting_lock_interval** | **int** | 0 &#x3D; None, 1 &#x3D; Month, 2 &#x3D; Quarter, 3 &#x3D; Year, 4 &#x3D; TaxDeclaration | [optional] 
 **tax_declaration_date** | [**\Struqtur\VismaEAccounting\Model\TaxDeclarationDateApi**](TaxDeclarationDateApi.md) | Purpose: Only for Sweden and Finland | [optional] 
@@ -34,8 +37,15 @@ Name | Type | Description | Notes
 **next_supplier_number** | **int** |  | [optional] 
 **next_customer_invoice_number** | **int** |  | [optional] 
 **next_quote_number** | **int** |  | [optional] 
+**next_order_number** | **int** |  | [optional] 
+**next_article_number** | **int** |  | [optional] 
 **show_prices_excl_vat_pc** | **bool** | Show prices excluding VAT for private individuals | [optional] 
+**show_contribution_margin** | **bool** |  | [optional] 
+**has_proportional_vat_enabled** | **bool** |  | [optional] 
+**proportional_vat_value** | **int** |  | [optional] 
 **is_payslip_activated** | **bool** |  | [optional] 
+**uses_cost_center** | **bool** |  | [optional] 
+**uses_project** | **bool** |  | [optional] 
 **uses_moss** | **bool** |  | [optional] 
 **uses_payment_reference_number** | **bool** | Show OCR/KID reference no. on invoice | [optional] 
 **domestic_currency_rounding** | **int** | 0 &#x3D; None, HalfAwayFromZero &#x3D; 1 | [optional] 
@@ -52,6 +62,8 @@ Name | Type | Description | Notes
 **use_automatic_vat_calculation** | **bool** | When set to true, vat rows are added (when creating a voucher for example), if the account used relates to.  Used for SE, NO, FI | [optional] 
 **show_cost_center_reminder** | **bool** | Customer has opted to get reminded about adding a cost center when creating invoices. | [optional] 
 **show_project_reminder** | **bool** | Customer has opted to get reminded about adding a project when creating invoices. | [optional] 
+**uses_green_technology** | **bool** | Customer has opted to use Green Technology. | [optional] 
+**company_green_technology_settings** | [**\Struqtur\VismaEAccounting\Model\CompanyGreenTechnologySettingsApi**](CompanyGreenTechnologySettingsApi.md) | Customer&#39;s GreenTechnology settings | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
